@@ -195,6 +195,3 @@ app.get('/grupoDos/registros/pdf', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor iniciado en el puerto ${PORT}`);
 });
-
-   
-    
