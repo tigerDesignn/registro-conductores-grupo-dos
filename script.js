@@ -96,6 +96,7 @@ function renderTable(data) {
     // Agregar evento de envío de formulario
     document.getElementById('registro-form').addEventListener('submit', addRegistro);
    
+    // -error
     document.getElementById('download-pdf').addEventListener('click', () => {
       downloadPDF();
     });
