@@ -85,7 +85,15 @@ function renderTable(data) {
   
   // Obtener datos iniciales al cargar la página
   window.onload = async () => {
-    const response = await fetch('/grupoDos/registros');
+    // const response = await fetch('/grupoDos/registros');
+    
+    const response = await fetch('/grupoDos/registros', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    
     if (response.ok) {
       const data = await response.json();
       renderTable(data);
