@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Configurar conexión a MongoDB
-mongoose.connect('mongodb+srv://programadorjs72:Xez7JL9KS7Oun2F9@dbcluster.q6hqbbh.mongodb.net/?retryWrites=true&w=majority&appName=dbCluster', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://programadorjs72:Xez7JL9KS7Oun2F9@dbcluster.q6hqbbh.mongodb.net/registroTerritorio?retryWrites=true&w=majority&appName=dbCluster', { useNewUrlParser: true, useUnifiedTopology: true });
 const Registro = mongoose.model('Registro', {
     conductor: String,
     fechaInicio: String,
