@@ -1,4 +1,9 @@
-const express = require('express');
+
+
+
+
+
+    const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -9,6 +14,7 @@ const PORT = process.env.PORT || 3000;
 
 // Configurar conexión a MongoDB
 mongoose.connect('mongodb+srv://programadorjs72:Xez7JL9KS7Oun2F9@dbcluster.q6hqbbh.mongodb.net/registroTerritorio?retryWrites=true&w=majority&appName=dbCluster', { useNewUrlParser: true, useUnifiedTopology: true });
+
 const Registro = mongoose.model('Registro', {
     conductor: String,
     fechaInicio: String,
@@ -18,6 +24,11 @@ const Registro = mongoose.model('Registro', {
 
 // Middleware
 app.use(bodyParser.json());
+
+//prueba
+// Servir archivos estáticos
+app.use(express.static(path.join(__dirname, 'public')));
+//prueba
 
 // Rutas
 app.get('/', (req, res) => {
@@ -189,3 +200,6 @@ app.get('/grupoDos/registros/pdf', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor iniciado en el puerto ${PORT}`);
 });
+
+   
+    
